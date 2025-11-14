@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         transform.position += moveDirection * Speed * Time.deltaTime;
     }
 
+
     public void ShootProyectile()
     {
         //-> obtener posicon del mouse respecto a la resolucion de la patanlla
