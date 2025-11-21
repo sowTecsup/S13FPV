@@ -15,4 +15,11 @@ public class Bullet : MonoBehaviour
     {
         transform.position += transform.up * Speed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //->agregar que ignore ser destruidas por otras balas
+        if(collision.tag != "Player" && collision.tag != "Bullet")
+            Destroy(gameObject);
+    }
 }

@@ -46,4 +46,11 @@ public class PlayerController : MonoBehaviour
 
         print(worldPositon);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            print("Perdiste");
+        }
+    }
 }
